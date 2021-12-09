@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Roboto", "Bebas Neue", sans-serif;
+    overflow-y: scroll;
+    background-color: rgb(0, 0, 0);
+}
+
+nav {
+    // border-bottom: 1px solid black;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(187, 187, 187, 0.23);
+    width: 100%;
+}
+
+.bar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    list-style: none;
+    align-content: center;
+}
+
+nav ul li {
+    color: white;
+    margin: 21px 10px 11px 10px;
+    padding: 10px 15px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+//* Carousel
+.bg-blur{
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    background-image: url(img/Carrusel/carousel1.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+}
+
+.container-fluid {
+    // padding-right: 100px;
+    // padding-left: 100px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: rgb(0, 0, 0);
+
+}
+
+#carouselHero .carousel-item img {
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    height: 100vh;
+    z-index: 0;
+    border-radius: 15px;
+
+}
+
+#carouselHero .carousel-item:before {
+    content: "";
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.021));
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+// !masonry
+
+.grid {
+    background: rgb(0, 0, 0);
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 33.22%;
+    padding: 3px;
+
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}

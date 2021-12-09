@@ -1,0 +1,113 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", "Bebas Neue", sans-serif;
+  overflow-y: scroll;
+  background-color: black;
+}
+
+nav {
+  position: absolute;
+  z-index: 1;
+  background-color: rgba(187, 187, 187, 0.23);
+  width: 100%;
+}
+
+.bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  list-style: none;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+nav ul li {
+  color: white;
+  margin: 21px 10px 11px 10px;
+  padding: 10px 15px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.bg-blur {
+  position: absolute;
+  background-color: black;
+  background-image: url(img/Carrusel/carousel1.jpg);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(8px);
+          filter: blur(8px);
+}
+
+.container-fluid {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: black;
+}
+
+#carouselHero .carousel-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  overflow: hidden;
+  height: 100vh;
+  z-index: 0;
+  border-radius: 15px;
+}
+
+#carouselHero .carousel-item:before {
+  content: "";
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.021)));
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.021));
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.grid {
+  background: black;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+.grid-sizer,
+.grid-item {
+  width: 33.22%;
+  padding: 3px;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
