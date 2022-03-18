@@ -29,16 +29,30 @@ nav {
     align-content: center;
 }
 
-nav ul li {
+nav ul {
+    padding-left: 0;
+}
+
+nav ul a li{
     color: white;
     margin: 21px 10px 11px 10px;
     padding: 10px 15px;
     border: 1px solid white;
     cursor: pointer;
+    transition: background-color 0.5;
+}
+
+nav ul a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li:hover {
+    background-color: rgba(255, 255, 255, 0.267);
 }
 
 //* Carousel
-.bg-blur{
+.bg-blur {
     position: absolute;
     background-color: rgb(0, 0, 0);
     background-image: url(img/Carrusel/carousel1.jpg);
@@ -52,9 +66,10 @@ nav ul li {
     // padding-right: 100px;
     // padding-left: 100px;
     padding-bottom: 20px;
-    padding-top: 20px;
+    // padding-top:  20px;
     background-color: rgb(0, 0, 0);
-
+    writing-mode: vertical;
+    overflow: hidden;
 }
 
 #carouselHero .carousel-item img {
@@ -75,9 +90,42 @@ nav ul li {
     top: 0;
     width: 100vw;
     height: 100vh;
-    
+
 }
 
+.carousel-caption {
+    top: 43%;
+}
+
+.container-fluid a {
+    font-family: Bebas neue;
+    font-size: 4.5rem;
+    position: relative;
+}
+
+.container-fluid p {
+    font-family: Roboto;
+    font-size: 2.0rem;
+    position: relative;
+    font-weight: 100;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 0;
+}
+
+// ! video
+
+.video-container {
+    background-color: black;
+}
+
+.video1{
+    width: 100%;
+    padding: 5px;
+    border-radius: 15px;
+}
 // !masonry
 
 .grid {
@@ -95,7 +143,7 @@ nav ul li {
 
 .grid-sizer,
 .grid-item {
-    width: 33.22%;
+    width: 99%;
     padding: 3px;
 
 }
@@ -107,4 +155,128 @@ nav ul li {
 .grid-item img {
     display: block;
     max-width: 100%;
+}
+
+.grid.are-images-unloaded {
+    opacity: 0;
+}
+
+.grid.are-images-unloaded .grid-item {
+    opacity: 0;
+}
+
+.page-load-status {
+    display: none;
+    padding: 20px 0;
+    // border-top: 1px solid #DDD;
+    text-align: center;
+    color: #777;
+    background-color: black;
+}
+
+// ellips loader
+
+.loader-ellips {
+    font-size: 2rem;
+    position: relative;
+    width: 4rem;
+    height: 1rem;
+    margin: 10px auto;
+}
+
+.loader-ellips__dot {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5em;
+    background: #555;
+    position: absolute;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+.loader-ellips__dot:nth-child(1),
+.loader-ellips__dot:nth-child(2) {
+    left: 0;
+}
+
+.loader-ellips__dot:nth-child(3) {
+    left: 1.5rem;
+}
+
+.loader-ellips__dot:nth-child(4) {
+    left: 3rem;
+}
+
+@keyframes reveal {
+    from {
+        transform: scale(0.001);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes slide {
+    to {
+        transform: translateX(1.5em)
+    }
+}
+
+.loader-ellips__dot:nth-child(1) {
+    animation-name: reveal;
+}
+
+.loader-ellips__dot:nth-child(2),
+.loader-ellips__dot:nth-child(3) {
+    animation-name: slide;
+}
+
+.loader-ellips__dot:nth-child(4) {
+    animation-name: reveal;
+    animation-direction: reverse;
+}
+
+// !footer
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: black;
+}
+
+footer section {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+footer img {
+width: 140px;
+height: auto;
+}
+
+.left li {
+    margin: 10px 0;
+}
+
+.left a {
+    text-decoration: none;
+    color: white;
+}
+
+.left a img {
+    width: 20px;
+    margin-right: 10px;
+    filter: grayscale(100%);
 }

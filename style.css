@@ -37,12 +37,27 @@ nav {
       align-content: center;
 }
 
-nav ul li {
+nav ul {
+  padding-left: 0;
+}
+
+nav ul a li {
   color: white;
   margin: 21px 10px 11px 10px;
   padding: 10px 15px;
   border: 1px solid white;
   cursor: pointer;
+  -webkit-transition: background-color 0.5;
+  transition: background-color 0.5;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li:hover {
+  background-color: rgba(255, 255, 255, 0.267);
 }
 
 .bg-blur {
@@ -58,8 +73,11 @@ nav ul li {
 
 .container-fluid {
   padding-bottom: 20px;
-  padding-top: 20px;
   background-color: black;
+  -webkit-writing-mode: vertical;
+      -ms-writing-mode: vertical;
+          writing-mode: vertical;
+  overflow: hidden;
 }
 
 #carouselHero .carousel-item img {
@@ -84,6 +102,38 @@ nav ul li {
   height: 100vh;
 }
 
+.carousel-caption {
+  top: 43%;
+}
+
+.container-fluid a {
+  font-family: Bebas neue;
+  font-size: 4.5rem;
+  position: relative;
+}
+
+.container-fluid p {
+  font-family: Roboto;
+  font-size: 2.0rem;
+  position: relative;
+  font-weight: 100;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 0;
+}
+
+.video-container {
+  background-color: black;
+}
+
+.video1 {
+  width: 100%;
+  padding: 5px;
+  border-radius: 15px;
+}
+
 .grid {
   background: black;
 }
@@ -98,7 +148,7 @@ nav ul li {
 /* ---- .grid-item ---- */
 .grid-sizer,
 .grid-item {
-  width: 33.22%;
+  width: 99%;
   padding: 3px;
 }
 
@@ -109,5 +159,160 @@ nav ul li {
 .grid-item img {
   display: block;
   max-width: 100%;
+}
+
+.grid.are-images-unloaded {
+  opacity: 0;
+}
+
+.grid.are-images-unloaded .grid-item {
+  opacity: 0;
+}
+
+.page-load-status {
+  display: none;
+  padding: 20px 0;
+  text-align: center;
+  color: #777;
+  background-color: black;
+}
+
+.loader-ellips {
+  font-size: 2rem;
+  position: relative;
+  width: 4rem;
+  height: 1rem;
+  margin: 10px auto;
+}
+
+.loader-ellips__dot {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5em;
+  background: #555;
+  position: absolute;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.loader-ellips__dot:nth-child(1),
+.loader-ellips__dot:nth-child(2) {
+  left: 0;
+}
+
+.loader-ellips__dot:nth-child(3) {
+  left: 1.5rem;
+}
+
+.loader-ellips__dot:nth-child(4) {
+  left: 3rem;
+}
+
+@-webkit-keyframes reveal {
+  from {
+    -webkit-transform: scale(0.001);
+            transform: scale(0.001);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes reveal {
+  from {
+    -webkit-transform: scale(0.001);
+            transform: scale(0.001);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes slide {
+  to {
+    -webkit-transform: translateX(1.5em);
+            transform: translateX(1.5em);
+  }
+}
+
+@keyframes slide {
+  to {
+    -webkit-transform: translateX(1.5em);
+            transform: translateX(1.5em);
+  }
+}
+
+.loader-ellips__dot:nth-child(1) {
+  -webkit-animation-name: reveal;
+          animation-name: reveal;
+}
+
+.loader-ellips__dot:nth-child(2),
+.loader-ellips__dot:nth-child(3) {
+  -webkit-animation-name: slide;
+          animation-name: slide;
+}
+
+.loader-ellips__dot:nth-child(4) {
+  -webkit-animation-name: reveal;
+          animation-name: reveal;
+  animation-direction: reverse;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 150px;
+  background-color: black;
+}
+
+footer section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .left ul {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  list-style: none;
+}
+
+footer img {
+  width: 140px;
+  height: auto;
+}
+
+.left li {
+  margin: 10px 0;
+}
+
+.left a {
+  text-decoration: none;
+  color: white;
+}
+
+.left a img {
+  width: 20px;
+  margin-right: 10px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 /*# sourceMappingURL=style.css.map */
