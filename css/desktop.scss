@@ -1,0 +1,30 @@
+.container-fluid a {
+    font-size: 9.0rem;
+}
+
+.container-fluid p {
+    font-size: 3rem;
+}
+
+.grid-sizer,
+.grid-item {
+    width: 33.22%;
+    padding: 3px;
+}
+
+.video-container {
+}
+
+.video1{
+    padding: 0 100px 20px 100px;
+}
+
+.container-fluid {
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-bottom: 20px;
+    padding-top:  10px;
+    background-color: rgb(0, 0, 0);
+    writing-mode: vertical;
+    overflow: hidden;
+}
